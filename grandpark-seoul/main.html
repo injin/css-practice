@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<style>
+    @font-face {
+        font-family: 'NanumSquareRound';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'nanumSquareRound';
+        font-size: 15px;
+        color: #222;
+    }
+    a {
+        text-decoration: none;
+    }
+    button {
+        border: none;
+        cursor: pointer;
+        background: none;
+    }
+    .wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    /* ==== 헤더 ==== */
+    header {
+        background-color: white;
+        box-shadow: 0 3px 30px 0 rgba(0,0,0,0.05);
+        position: sticky;
+        top: 0;
+    }
+    header .wrap {
+        display: flex;
+        align-items: center;
+    }
+    header .logo_box {
+        width: 214px;
+        height: 63px;
+        flex-shrink: 0;
+    }
+    header .logo_box .logo_link {
+        display: block;
+        height: 100%;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: 214px 63px;
+        background-image: url(./img/logo.png);
+    }
+    header .header_search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+    }
+    header .header_search .search_bar {
+        width: 350px;
+        height: 44px;
+        padding: 0px 19px;
+        border-radius: 22px;
+        background: #F1F4F7;
+    }
+    header .header_search .search_input {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        background: #F1F4F7;
+        color: #222;
+        vertical-align: middle;
+        outline: none;
+    }
+    header .header_menu {
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+    }
+    header .header_menu .menu_btn {
+        background: url(./img/hamburger_menu.png) no-repeat;
+        width: 50px;
+        height: 50px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+    }
+
+    /* ==== 메인 ==== */
+    main {
+        clear: both;
+    }
+
+    /* === 카테고리바 === */
+    section.category {
+        margin-top: 16px;
+    }
+    .category_wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    .category_wrapper ul {
+        display: inline-flex;
+    }
+    .category_wrapper ul li {
+        list-style: none;
+        text-align: center;
+        padding: 0 10px;
+    }
+    .category_wrapper ul li img {
+        display: block;
+    }
+    .category_wrapper ul li span {
+        color: darkgray;
+        letter-spacing: -0.7px;
+
+    }
+
+    /* === 카드 목록 === */
+    .card_list {
+        padding: 0 10px 0 10px;
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px 20px;
+    }
+    .card_list .card .desc {
+        float: left;
+        width: calc(100% - 44px);
+        
+    }
+    .card_list .card .animal_img {
+        width: 100%;
+        height: 228px;
+        border-radius: 15px;
+    }
+    .card_list .card .title {
+        color: #000;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        padding-left: 10px;
+    }
+    .card_list .card .title_eng {
+        padding-left: 10px;
+        color: #CCC;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+    }
+    .card_list .card .btn_heart {
+        width: 44px;
+    }
+
+</style>
+</head>
+<body>
+    
+        <header>
+            <div class="wrap">
+            <div class="logo_box">
+                <a href="#" class="logo_link"></a>
+                
+            </div>
+            <div class="header_search">
+                <div class="search_bar">
+                    <input class="search_input" type="text" max="110" placeholder="검색어를 입력하세요" autocomplete="off">
+                </div>
+            </div>
+            <div class="header_menu">
+                <input type="button" class="menu_btn" />
+            </div>
+            </div>
+        </header>
+        <main>
+            <div class="wrap">
+            <section class="category">
+                <div class="category_wrapper">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="./img/category-fox.png"/>
+                                <span>포유류</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/category-bird.png"/>
+                                <span>조류</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/category-snake.png"/>
+                                <span>양서류</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/category-fish.png"/>
+                                <span>어류</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="card_list">
+                <div class="card">
+                    <a href="#"><div>
+                        <img class="animal_img" src="./img/leopard.jpg" />
+                        <div class="desc">
+                        <p class="title">흑표범</p>
+                        <p class="title_eng">Black Leopard</p>
+                        </div>
+                        <button type="button" class="btn_heart"><img src="./img/btn-heart.png"></button>
+                    </div></a>
+                </div>
+                <div class="card">
+                    <a href="#"><div>
+                        <img class="animal_img" src="./img/leopard.jpg" />
+                        <div class="desc">
+                        <p class="title">흑표범</p>
+                        <p class="title_eng">Black Leopard</p>
+                        </div>
+                        <button type="button" class="btn_heart"><img src="./img/btn-heart.png"></button>
+                    </div></a>
+                </div>
+                <div class="card">
+                    <a href="#"><div>
+                        <img class="animal_img" src="./img/leopard.jpg" />
+                        <div class="desc">
+                        <p class="title">흑표범</p>
+                        <p class="title_eng">Black Leopard</p>
+                        </div>
+                        <button type="button" class="btn_heart"><img src="./img/btn-heart.png"></button>
+                    </div></a>
+                </div>
+                <div class="card">
+                    <a href="#"><div>
+                        <img class="animal_img" src="./img/leopard.jpg" />
+                        <div class="desc">
+                        <p class="title">흑표범</p>
+                        <p class="title_eng">Black Leopard</p>
+                        </div>
+                        <button type="button" class="btn_heart"><img src="./img/btn-heart.png"></button>
+                    </div></a>
+                </div>
+                <div class="card">
+                    <a href="#"><div>
+                        <img class="animal_img" src="./img/leopard.jpg" />
+                        <div class="desc">
+                        <p class="title">흑표범</p>
+                        <p class="title_eng">Black Leopard</p>
+                        </div>
+                        <button type="button" class="btn_heart"><img src="./img/btn-heart.png"></button>
+                    </div></a>
+                </div>
+                <div class="card">
+                    <a href="#"><div>
+                        <img class="animal_img" src="./img/leopard.jpg" />
+                        <div class="desc">
+                        <p class="title">흑표범</p>
+                        <p class="title_eng">Black Leopard</p>
+                        </div>
+                        <button type="button" class="btn_heart"><img src="./img/btn-heart.png"></button>
+                    </div></a>
+                </div>
+                <div class="card">
+                    <a href="#"><div>
+                        <img class="animal_img" src="./img/leopard.jpg" />
+                        <div class="desc">
+                        <p class="title">흑표범</p>
+                        <p class="title_eng">Black Leopard</p>
+                        </div>
+                        <button type="button" class="btn_heart"><img src="./img/btn-heart.png"></button>
+                    </div></a>
+                </div>
+                <div class="card">
+                    <a href="#"><div>
+                        <img class="animal_img" src="./img/leopard.jpg" />
+                        <div class="desc">
+                        <p class="title">흑표범</p>
+                        <p class="title_eng">Black Leopard</p>
+                        </div>
+                        <button type="button" class="btn_heart"><img src="./img/btn-heart.png"></button>
+                    </div></a>
+                </div>
+                <div class="card">
+                    <a href="#"><div>
+                        <img class="animal_img" src="./img/leopard.jpg" />
+                        <div class="desc">
+                        <p class="title">흑표범</p>
+                        <p class="title_eng">Black Leopard</p>
+                        </div>
+                        <button type="button" class="btn_heart"><img src="./img/btn-heart.png"></button>
+                    </div></a>
+                </div>
+                <div class="card">
+                    <a href="#"><div>
+                        <img class="animal_img" src="./img/leopard.jpg" />
+                        <div class="desc">
+                        <p class="title">흑표범</p>
+                        <p class="title_eng">Black Leopard</p>
+                        </div>
+                        <button type="button" class="btn_heart"><img src="./img/btn-heart.png"></button>
+                    </div></a>
+                </div>
+                <div class="card">
+                    <a href="#"><div>
+                        <img class="animal_img" src="./img/leopard.jpg" />
+                        <div class="desc">
+                        <p class="title">흑표범</p>
+                        <p class="title_eng">Black Leopard</p>
+                        </div>
+                        <button type="button" class="btn_heart"><img src="./img/btn-heart.png"></button>
+                    </div></a>
+                </div>
+            </section>
+            </div>
+        </main>
+
+</body>
+</html>
