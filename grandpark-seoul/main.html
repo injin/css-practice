@@ -67,6 +67,7 @@
         padding: 0px 19px;
         border-radius: 22px;
         background: #F1F4F7;
+        /*display: block;*/
     }
     header .header_search .search_input {
         width: 100%;
@@ -137,10 +138,19 @@
         width: calc(100% - 44px);
         
     }
+    .card_list .card > a {
+        overflow: hidden;
+    }
     .card_list .card .animal_img {
         width: 100%;
         max-height: 228px;
         border-radius: 15px;
+        transition: 0.5s all;
+        margin-bottom: 6px;
+    }
+    .card_list .card .animal_img:hover {
+        filter: brightness(70%);
+        transform: scale( 1.05 );
     }
     .card_list .card .title {
         color: #000;
